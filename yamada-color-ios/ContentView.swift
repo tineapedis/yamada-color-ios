@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  cafferow-ios
+//  yamada-color-ios
 //
 //  Created by Naoyuki Murata on 2021/09/04.
 //

@@ -14,7 +14,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		723DC27B26E37C4200A24F0C /* cafferow-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "cafferow-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		723DC27B26E37C4200A24F0C /* yamada-color-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yamada-color-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		723DC27E26E37C4200A24F0C /* cafferow_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafferow_iosApp.swift; sourceTree = "<group>"; };
 		723DC28026E37C4200A24F0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		723DC28226E37C4400A24F0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -36,7 +36,7 @@
 		723DC27226E37C4200A24F0C = {
 			isa = PBXGroup;
 			children = (
-				723DC27D26E37C4200A24F0C /* cafferow-ios */,
+				723DC27D26E37C4200A24F0C /* yamada-color-ios */,
 				723DC27C26E37C4200A24F0C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -44,12 +44,12 @@
 		723DC27C26E37C4200A24F0C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				723DC27B26E37C4200A24F0C /* cafferow-ios.app */,
+				723DC27B26E37C4200A24F0C /* yamada-color-ios.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		723DC27D26E37C4200A24F0C /* cafferow-ios */ = {
+		723DC27D26E37C4200A24F0C /* yamada-color-ios */ = {
 			isa = PBXGroup;
 			children = (
 				723DC27E26E37C4200A24F0C /* cafferow_iosApp.swift */,
@@ -58,7 +58,7 @@
 				723DC28726E37C4400A24F0C /* Info.plist */,
 				723DC28426E37C4400A24F0C /* Preview Content */,
 			);
-			path = "cafferow-ios";
+			path = "yamada-color-ios";
 			sourceTree = "<group>";
 		};
 		723DC28426E37C4400A24F0C /* Preview Content */ = {
@@ -72,9 +72,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		723DC27A26E37C4200A24F0C /* cafferow-ios */ = {
+		723DC27A26E37C4200A24F0C /* yamada-color-ios */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 723DC28A26E37C4400A24F0C /* Build configuration list for PBXNativeTarget "cafferow-ios" */;
+			buildConfigurationList = 723DC28A26E37C4400A24F0C /* Build configuration list for PBXNativeTarget "yamada-color-ios" */;
 			buildPhases = (
 				723DC27726E37C4200A24F0C /* Sources */,
 				723DC27826E37C4200A24F0C /* Frameworks */,
@@ -84,9 +84,9 @@
 			);
 			dependencies = (
 			);
-			name = "cafferow-ios";
-			productName = "cafferow-ios";
-			productReference = 723DC27B26E37C4200A24F0C /* cafferow-ios.app */;
+			name = "yamada-color-ios";
+			productName = "yamada-color-ios";
+			productReference = 723DC27B26E37C4200A24F0C /* yamada-color-ios.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +103,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 723DC27626E37C4200A24F0C /* Build configuration list for PBXProject "cafferow-ios" */;
+			buildConfigurationList = 723DC27626E37C4200A24F0C /* Build configuration list for PBXProject "yamada-color-ios" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				723DC27A26E37C4200A24F0C /* cafferow-ios */,
+				723DC27A26E37C4200A24F0C /* yamada-color-ios */,
 			);
 		};
 /* End PBXProject section */
@@ -268,15 +268,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"cafferow-ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"yamada-color-ios/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "cafferow-ios/Info.plist";
+				INFOPLIST_FILE = "yamada-color-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "namu.cafferow-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "namu.yamada-color-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -289,15 +289,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_ASSET_PATHS = "\"cafferow-ios/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"yamada-color-ios/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = "cafferow-ios/Info.plist";
+				INFOPLIST_FILE = "yamada-color-ios/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "namu.cafferow-ios";
+				PRODUCT_BUNDLE_IDENTIFIER = "namu.yamada-color-ios";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,7 +307,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		723DC27626E37C4200A24F0C /* Build configuration list for PBXProject "cafferow-ios" */ = {
+		723DC27626E37C4200A24F0C /* Build configuration list for PBXProject "yamada-color-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				723DC28826E37C4400A24F0C /* Debug */,
@@ -316,7 +316,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		723DC28A26E37C4400A24F0C /* Build configuration list for PBXNativeTarget "cafferow-ios" */ = {
+		723DC28A26E37C4400A24F0C /* Build configuration list for PBXNativeTarget "yamada-color-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				723DC28B26E37C4400A24F0C /* Debug */,
