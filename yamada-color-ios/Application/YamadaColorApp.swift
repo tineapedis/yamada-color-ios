@@ -1,5 +1,5 @@
 //
-//  cafferow_iosApp.swift
+//  YamadaColorApp.swift
 //  yamada-color-ios
 //
 //  Created by Naoyuki Murata on 2021/09/04.
@@ -8,10 +8,10 @@
 import SwiftUI
 
 @main
-struct cafferow_iosApp: App {
+struct YamadaColorApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		723DC27F26E37C4200A24F0C /* cafferow_iosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DC27E26E37C4200A24F0C /* cafferow_iosApp.swift */; };
-		723DC28126E37C4200A24F0C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DC28026E37C4200A24F0C /* ContentView.swift */; };
+		723DC27F26E37C4200A24F0C /* YamadaColorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DC27E26E37C4200A24F0C /* YamadaColorApp.swift */; };
+		723DC28126E37C4200A24F0C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DC28026E37C4200A24F0C /* MainView.swift */; };
 		723DC28326E37C4400A24F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723DC28226E37C4400A24F0C /* Assets.xcassets */; };
 		723DC28626E37C4400A24F0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723DC28526E37C4400A24F0C /* Preview Assets.xcassets */; };
 		72A0424D26F71B2800002A2E /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A0424B26F71AFC00002A2E /* opencv2.xcframework */; };
@@ -17,8 +17,8 @@
 
 /* Begin PBXFileReference section */
 		723DC27B26E37C4200A24F0C /* yamada-color-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "yamada-color-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		723DC27E26E37C4200A24F0C /* cafferow_iosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cafferow_iosApp.swift; sourceTree = "<group>"; };
-		723DC28026E37C4200A24F0C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		723DC27E26E37C4200A24F0C /* YamadaColorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamadaColorApp.swift; sourceTree = "<group>"; };
+		723DC28026E37C4200A24F0C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		723DC28226E37C4400A24F0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		723DC28526E37C4400A24F0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		723DC28726E37C4400A24F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,8 +58,7 @@
 		723DC27D26E37C4200A24F0C /* yamada-color-ios */ = {
 			isa = PBXGroup;
 			children = (
-				723DC27E26E37C4200A24F0C /* cafferow_iosApp.swift */,
-				723DC28026E37C4200A24F0C /* ContentView.swift */,
+				72A0425326F73D4900002A2E /* Application */,
 				723DC28226E37C4400A24F0C /* Assets.xcassets */,
 				723DC28726E37C4400A24F0C /* Info.plist */,
 				723DC28426E37C4400A24F0C /* Preview Content */,
@@ -73,6 +72,15 @@
 				723DC28526E37C4400A24F0C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		72A0425326F73D4900002A2E /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				723DC27E26E37C4200A24F0C /* YamadaColorApp.swift */,
+				723DC28026E37C4200A24F0C /* MainView.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +158,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				723DC28126E37C4200A24F0C /* ContentView.swift in Sources */,
-				723DC27F26E37C4200A24F0C /* cafferow_iosApp.swift in Sources */,
+				723DC28126E37C4200A24F0C /* MainView.swift in Sources */,
+				723DC27F26E37C4200A24F0C /* YamadaColorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
