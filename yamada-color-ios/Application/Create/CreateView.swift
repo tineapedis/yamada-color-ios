@@ -12,10 +12,20 @@ struct CreateView: View {
         VStack {
             Image("yamada")
                 .resizable()
-                .frame(maxWidth: .infinity)
-                .scaledToFit()
+                .scaledToFill()
+                .padding(10)
             ColorSelectView()
-            Button("Create！", action: {})
+            Button(action: {}) {
+                Text("Create")
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .frame(width: 150,
+                           height: 40,
+                           alignment: .center/*@END_MENU_TOKEN@*/)
+            }
+            .background(Color.blue)
+            .cornerRadius(10)
+            Spacer()
         }
     }
 }

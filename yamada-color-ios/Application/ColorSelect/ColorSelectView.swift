@@ -14,48 +14,52 @@ struct ColorSelectView: View {
                 Button(action: {
                     print("Tap!!")
                 }) {
-                    Text("Button")
-                        .font(.largeTitle)
+                    Text("#00000")
+                        .font(.title)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity,
                                maxHeight: .infinity)
                 }
                 .background(Color.red)
+                .cornerRadius(20)
 
                 Button(action: {
                     print("Tap!!")
                 }) {
-                    Text("Button")
-                        .font(.largeTitle)
+                    Text("#00000")
+                        .font(.title)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity,
                                maxHeight: .infinity)
                 }
                 .background(Color.blue)
+                .cornerRadius(20)
 
             }
             VStack(spacing: 10) {
                 Button(action: {
                     print("Tap!!")
                 }) {
-                    Text("Button")
-                        .font(.largeTitle)
+                    Text("#00000")
+                        .font(.title)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity,
                                maxHeight: .infinity)
                 }
                 .background(Color.green)
+                .cornerRadius(20)
 
                 Button(action: {
                     print("Tap!!")
                 }) {
-                    Text("Button")
-                        .font(.largeTitle)
+                    Text("#00000")
+                        .font(.title)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity,
                                maxHeight: .infinity)
                 }
                 .background(Color.orange)
+                .cornerRadius(20)
             }
         }.padding(10)
     }
