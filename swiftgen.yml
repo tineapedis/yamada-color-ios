@@ -1,0 +1,8 @@
+xcassets:
+  inputs:
+    - Resource/Colors.xcassets
+  outputs:
+    - templateName: swift5
+      output: Resource/Generated/color-assets.swift
+      params:
+        enumName: Colors
