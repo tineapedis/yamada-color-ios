@@ -16,6 +16,7 @@
 		72A0425926F776E000002A2E /* MainCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0425826F776E000002A2E /* MainCore.swift */; };
 		72A0425C26F784E700002A2E /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0425B26F784E700002A2E /* CreateView.swift */; };
 		72A0426026F787E700002A2E /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A0425F26F787E700002A2E /* Image.xcassets */; };
+		72A0426526F78E1E00002A2E /* ColorSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0426426F78E1E00002A2E /* ColorSelectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		72A0425826F776E000002A2E /* MainCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCore.swift; sourceTree = "<group>"; };
 		72A0425B26F784E700002A2E /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
 		72A0425F26F787E700002A2E /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		72A0426426F78E1E00002A2E /* ColorSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				723DC27E26E37C4200A24F0C /* YamadaColorApp.swift */,
 				72A0425426F73F1D00002A2E /* Main */,
 				72A0425A26F784C300002A2E /* Create */,
+				72A0426126F78D9900002A2E /* ColorSelect */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -114,6 +117,14 @@
 				72A0425F26F787E700002A2E /* Image.xcassets */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		72A0426126F78D9900002A2E /* ColorSelect */ = {
+			isa = PBXGroup;
+			children = (
+				72A0426426F78E1E00002A2E /* ColorSelectView.swift */,
+			);
+			path = ColorSelect;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72A0426526F78E1E00002A2E /* ColorSelectView.swift in Sources */,
 				723DC28126E37C4200A24F0C /* MainView.swift in Sources */,
 				723DC27F26E37C4200A24F0C /* YamadaColorApp.swift in Sources */,
 				72A0425C26F784E700002A2E /* CreateView.swift in Sources */,

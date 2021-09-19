@@ -9,7 +9,14 @@ import SwiftUI
 
 struct CreateView: View {
     var body: some View {
-        Text("CreateView")
+        VStack {
+            Image("yamada")
+                .resizable()
+                .frame(maxWidth: .infinity)
+                .scaledToFit()
+            ColorSelectView()
+            Button("Create！", action: {})
+        }
     }
 }
 
