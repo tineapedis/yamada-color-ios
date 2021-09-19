@@ -1,8 +1,8 @@
 xcassets:
   inputs:
-    - Resource/Colors.xcassets
+    - yamada-color-ios/Resource/Color.xcassets
   outputs:
-    - templateName: swift5
-      output: Resource/Generated/color-assets.swift
+    - templatePath: Tools/.build/checkouts/SwiftGen/templates/xcassets/swift5.stencil
+      output: yamada-color-ios/Resource/Generated/color-assets.swift
       params:
         enumName: Colors
