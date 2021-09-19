@@ -11,7 +11,12 @@ import SwiftUI
 struct YamadaColorApp: App {
     var body: some Scene {
         WindowGroup {
-            MainView()
+            MainView(
+                store: .init(
+                    initialState: .init(),
+                    reducer: mainReducer,
+                    environment: MainEnvironment())
+            )
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import ComposableArchitecture
 
-struct MainState {
+struct MainState: Equatable {
     enum TabType {
         case create
         case list
