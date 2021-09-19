@@ -19,7 +19,7 @@ struct MainView: View {
                     send: MainAction.didTapTab
                 ),
                 content: {
-                    Text("Tab Content 1")
+                    CreateView()
                         .tabItem {
                             Image(systemName: "plus.app.fill")
                         }
