@@ -8,60 +8,40 @@
 import SwiftUI
 
 struct ColorSelectView: View {
+    let purpleAreaColor = YamadaColor(defaultType: .purple)
+    let blackAreaColor = YamadaColor(defaultType: .black)
+    let yellowAreaColor = YamadaColor(defaultType: .yellow)
+    let pinkAreaColor = YamadaColor(defaultType: .pink)
+
     var body: some View {
         HStack(spacing: 10) {
             VStack(spacing: 10) {
-                Button(action: {
-                    print("Tap!!")
-                }) {
-                    Text("#00000")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity,
-                               maxHeight: .infinity)
-                }
-                .background(Color.red)
-                .cornerRadius(20)
-
-                Button(action: {
-                    print("Tap!!")
-                }) {
-                    Text("#00000")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity,
-                               maxHeight: .infinity)
-                }
-                .background(Color.blue)
-                .cornerRadius(20)
-
+                ColorButtonView(yamadaColor: purpleAreaColor)
+                ColorButtonView(yamadaColor: blackAreaColor)
             }
             VStack(spacing: 10) {
-                Button(action: {
-                    print("Tap!!")
-                }) {
-                    Text("#00000")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity,
-                               maxHeight: .infinity)
-                }
-                .background(Color.green)
-                .cornerRadius(20)
-
-                Button(action: {
-                    print("Tap!!")
-                }) {
-                    Text("#00000")
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity,
-                               maxHeight: .infinity)
-                }
-                .background(Color(Colors.yamadaPink.color))
-                .cornerRadius(20)
+                ColorButtonView(yamadaColor: yellowAreaColor)
+                ColorButtonView(yamadaColor: pinkAreaColor)
             }
         }.padding(10)
+    }
+}
+
+struct ColorButtonView: View {
+    let yamadaColor: YamadaColor
+
+    var body: some View {
+        Button(action: {
+            print("Tap!!")
+        }) {
+            Text(yamadaColor.hex)
+                .font(.title)
+                .foregroundColor(.white)
+                .frame(maxWidth: .infinity,
+                       maxHeight: .infinity)
+        }
+        .background(yamadaColor.color)
+        .cornerRadius(20)
     }
 }
 

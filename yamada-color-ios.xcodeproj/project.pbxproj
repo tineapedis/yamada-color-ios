@@ -20,6 +20,7 @@
 		72DECCC326F7A98200F66BA8 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72DECCC226F7A98200F66BA8 /* Color.xcassets */; };
 		72DECCC626F7BA3F00F66BA8 /* color-assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCC526F7BA3F00F66BA8 /* color-assets.swift */; };
 		72DECCC926F87E7600F66BA8 /* YamadaDefaultColorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCC826F87E7600F66BA8 /* YamadaDefaultColorType.swift */; };
+		72DECCCB26F8820400F66BA8 /* YamadaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCCA26F8820400F66BA8 /* YamadaColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		72DECCC226F7A98200F66BA8 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
 		72DECCC526F7BA3F00F66BA8 /* color-assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "color-assets.swift"; sourceTree = "<group>"; };
 		72DECCC826F87E7600F66BA8 /* YamadaDefaultColorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamadaDefaultColorType.swift; sourceTree = "<group>"; };
+		72DECCCA26F8820400F66BA8 /* YamadaColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamadaColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				72DECCC826F87E7600F66BA8 /* YamadaDefaultColorType.swift */,
+				72DECCCA26F8820400F66BA8 /* YamadaColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72DECCCB26F8820400F66BA8 /* YamadaColor.swift in Sources */,
 				72A0426526F78E1E00002A2E /* ColorSelectView.swift in Sources */,
 				72DECCC926F87E7600F66BA8 /* YamadaDefaultColorType.swift in Sources */,
 				723DC28126E37C4200A24F0C /* MainView.swift in Sources */,
