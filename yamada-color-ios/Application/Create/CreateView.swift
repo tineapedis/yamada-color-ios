@@ -15,13 +15,15 @@ struct CreateView: View {
                 .scaledToFill()
                 .padding(10)
             ColorSelectView()
-            Button(action: {}) {
+            Button(action: {
+                // TODO: Createボタン処理実装
+            }) {
                 Text("Create")
                     .font(.title)
                     .foregroundColor(.white)
                     .frame(width: 150,
                            height: 40,
-                           alignment: .center/*@END_MENU_TOKEN@*/)
+                           alignment: .center)
             }
             .background(Color.blue)
             .cornerRadius(10)

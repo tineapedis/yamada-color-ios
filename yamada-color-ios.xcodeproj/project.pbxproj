@@ -21,6 +21,7 @@
 		72DECCC626F7BA3F00F66BA8 /* color-assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCC526F7BA3F00F66BA8 /* color-assets.swift */; };
 		72DECCC926F87E7600F66BA8 /* YamadaDefaultColorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCC826F87E7600F66BA8 /* YamadaDefaultColorType.swift */; };
 		72DECCCB26F8820400F66BA8 /* YamadaColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCCA26F8820400F66BA8 /* YamadaColor.swift */; };
+		72DECCCD26F8921400F66BA8 /* ColorSelectCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCCC26F8921400F66BA8 /* ColorSelectCore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		72DECCC526F7BA3F00F66BA8 /* color-assets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "color-assets.swift"; sourceTree = "<group>"; };
 		72DECCC826F87E7600F66BA8 /* YamadaDefaultColorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamadaDefaultColorType.swift; sourceTree = "<group>"; };
 		72DECCCA26F8820400F66BA8 /* YamadaColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamadaColor.swift; sourceTree = "<group>"; };
+		72DECCCC26F8921400F66BA8 /* ColorSelectCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectCore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			isa = PBXGroup;
 			children = (
 				72A0426426F78E1E00002A2E /* ColorSelectView.swift */,
+				72DECCCC26F8921400F66BA8 /* ColorSelectCore.swift */,
 			);
 			path = ColorSelect;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72DECCCB26F8820400F66BA8 /* YamadaColor.swift in Sources */,
+				72DECCCD26F8921400F66BA8 /* ColorSelectCore.swift in Sources */,
 				72A0426526F78E1E00002A2E /* ColorSelectView.swift in Sources */,
 				72DECCC926F87E7600F66BA8 /* YamadaDefaultColorType.swift in Sources */,
 				723DC28126E37C4200A24F0C /* MainView.swift in Sources */,
