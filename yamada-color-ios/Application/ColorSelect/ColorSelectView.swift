@@ -58,7 +58,7 @@ struct ColorSelectView: View {
                         .frame(maxWidth: .infinity,
                                maxHeight: .infinity)
                 }
-                .background(Color.orange)
+                .background(Color(Colors.yamadaPink.color))
                 .cornerRadius(20)
             }
         }.padding(10)
