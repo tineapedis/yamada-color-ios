@@ -14,7 +14,9 @@ struct CreateView: View {
                 .resizable()
                 .scaledToFill()
                 .padding(10)
-            ColorSelectView()
+            ColorSelectView(store: .init(initialState: ColorSelectState(),
+                                         reducer: colorSelectReducer,
+                                         environment: ColorSelectEnvironment()))
             Button(action: {
                 // TODO: Createボタン処理実装
             }) {
