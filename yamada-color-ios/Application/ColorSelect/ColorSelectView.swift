@@ -9,6 +9,7 @@ import ComposableArchitecture
 import SwiftUI
 
 struct ColorSelectView: View {
+    @State var color = Color.red
     let store: Store<ColorSelectState, ColorSelectAction>
     let purpleAreaColor = YamadaColor(defaultType: .purple)
     let blackAreaColor = YamadaColor(defaultType: .black)
@@ -19,21 +20,30 @@ struct ColorSelectView: View {
         WithViewStore(self.store) { viewStore in
             HStack(spacing: 10) {
                 VStack(spacing: 10) {
-                    colorButtonView(viewStore: viewStore, yamadaColor: purpleAreaColor)
-                    colorButtonView(viewStore: viewStore, yamadaColor: blackAreaColor)
+                    colorButtonView(viewStore: viewStore,
+                                    yamadaColor: purpleAreaColor,
+                                    color: $color)
+                    colorButtonView(viewStore: viewStore,
+                                    yamadaColor: blackAreaColor,
+                                    color: $color)
                 }
                 VStack(spacing: 10) {
-                    colorButtonView(viewStore: viewStore, yamadaColor: yellowAreaColor)
-                    colorButtonView(viewStore: viewStore, yamadaColor: pinkAreaColor)
+                    colorButtonView(viewStore: viewStore,
+                                    yamadaColor: yellowAreaColor,
+                                    color: $color)
+                    colorButtonView(viewStore: viewStore,
+                                    yamadaColor: pinkAreaColor,
+                                    color: $color)
                 }
             }.padding(10)
         }
     }
 }
 
-func colorButtonView(viewStore: ViewStore<ColorSelectState, ColorSelectAction>,
-                     yamadaColor: YamadaColor) -> some View {
-    return Button(action: {
+private func colorButtonView(viewStore: ViewStore<ColorSelectState, ColorSelectAction>,
+                             yamadaColor: YamadaColor,
+                             color: Binding<Color>) -> some View {
+    let button = Button(action: {
         viewStore.send(.didTapColorButton)
     }) {
         Text(yamadaColor.hex)
@@ -44,6 +54,11 @@ func colorButtonView(viewStore: ViewStore<ColorSelectState, ColorSelectAction>,
     }
     .background(yamadaColor.color)
     .cornerRadius(20)
+
+    return VStack {
+        button
+        ColorPicker.init("test", selection: color)
+    }
 }
 
 struct ColorSelectView_Previews: PreviewProvider {
