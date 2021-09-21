@@ -8,7 +8,7 @@
 
 import SwiftUI
 
-struct YamadaColor {
+struct YamadaColor: Equatable {
     var color: Color
     var hex: String
 
