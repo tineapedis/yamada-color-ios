@@ -13,23 +13,19 @@ struct ColorSelectView: View {
 
     var body: some View {
         WithViewStore(self.store) { _ in
-            HStack(spacing: 10) {
-                VStack(spacing: 10) {
-                    YamadaColorView(store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .purple)),
-                                                 reducer: yamadaColorReducer,
-                                                 environment: YamadaColorEnvironment()))
-                    YamadaColorView(store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .yellow)),
-                                                 reducer: yamadaColorReducer,
-                                                 environment: YamadaColorEnvironment()))
-                }
-                VStack(spacing: 10) {
-                    YamadaColorView(store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .black)),
-                                                 reducer: yamadaColorReducer,
-                                                 environment: YamadaColorEnvironment()))
-                    YamadaColorView(store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .pink)),
-                                                 reducer: yamadaColorReducer,
-                                                 environment: YamadaColorEnvironment()))
-                }
+            VStack(spacing: 10) {
+                YamadaColorView(store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .purple)),
+                                             reducer: yamadaColorReducer,
+                                             environment: YamadaColorEnvironment()))
+                YamadaColorView(store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .yellow)),
+                                             reducer: yamadaColorReducer,
+                                             environment: YamadaColorEnvironment()))
+                YamadaColorView(store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .black)),
+                                             reducer: yamadaColorReducer,
+                                             environment: YamadaColorEnvironment()))
+                YamadaColorView(store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .pink)),
+                                             reducer: yamadaColorReducer,
+                                             environment: YamadaColorEnvironment()))
             }.padding(10)
         }
     }

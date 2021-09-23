@@ -23,7 +23,7 @@ let yamadaColorReducer = Reducer<YamadaColorState, YamadaColorAction, YamadaColo
     Reducer { state, action, _ in
         switch action {
         case .didChangeColor(let color):
-            state.yamadaColor = YamadaColor(color: color, hex: "changeJHex")
+            state.yamadaColor = YamadaColor(color: color, hex: "TODO: ColorからHEX値を求める")
             return .none
         }
     }

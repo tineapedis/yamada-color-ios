@@ -15,17 +15,15 @@ struct YamadaColorView: View {
 
     var body: some View {
         WithViewStore(self.store) { viewStore in
-            VStack {
-                Button(action: {
-                }) {
-                    Text(viewStore.yamadaColor.hex)
-                        .font(.title)
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity, maxHeight: .infinity)
-                }
-                .background(viewStore.yamadaColor.color)
-                .cornerRadius(20)
-                ColorPicker("test", selection: $color)
+            HStack {
+                Text(viewStore.yamadaColor.hex)
+                    .font(.title)
+                    .foregroundColor(.white)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .background(viewStore.yamadaColor.color)
+                    .cornerRadius(10)
+                ColorPicker("", selection: $color)
+                    .labelsHidden()
                     .onChange(of: color, perform: { _ in
                         viewStore.send(.didChangeColor(color))
                     })
