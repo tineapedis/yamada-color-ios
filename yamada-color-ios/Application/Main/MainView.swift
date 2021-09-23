@@ -19,7 +19,9 @@ struct MainView: View {
                     send: MainAction.didTapTab
                 ),
                 content: {
-                    CreateView()
+                    CreateImageView(store: .init(initialState: .init(),
+                                                 reducer: createImageReducer,
+                                                 environment: CreateImageEnvironment()))
                         .tabItem {
                             Image(systemName: "plus.app.fill")
                         }

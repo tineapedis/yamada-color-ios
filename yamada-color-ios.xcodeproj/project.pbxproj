@@ -14,7 +14,7 @@
 		72A0424D26F71B2800002A2E /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A0424B26F71AFC00002A2E /* opencv2.xcframework */; };
 		72A0425226F7214B00002A2E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 72A0425126F7214B00002A2E /* ComposableArchitecture */; };
 		72A0425926F776E000002A2E /* MainCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0425826F776E000002A2E /* MainCore.swift */; };
-		72A0425C26F784E700002A2E /* CreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0425B26F784E700002A2E /* CreateView.swift */; };
+		72A0425C26F784E700002A2E /* CreateImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0425B26F784E700002A2E /* CreateImageView.swift */; };
 		72A0426026F787E700002A2E /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72A0425F26F787E700002A2E /* Image.xcassets */; };
 		72A0426526F78E1E00002A2E /* ColorSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0426426F78E1E00002A2E /* ColorSelectView.swift */; };
 		72DECCC326F7A98200F66BA8 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72DECCC226F7A98200F66BA8 /* Color.xcassets */; };
@@ -26,6 +26,7 @@
 		72DECCD226FA5ABD00F66BA8 /* YamadaColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCD126FA5ABD00F66BA8 /* YamadaColorView.swift */; };
 		72DECCD526FCD03A00F66BA8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCD426FCD03A00F66BA8 /* UIColor+.swift */; };
 		72DECCD826FCD2D900F66BA8 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCD726FCD2D900F66BA8 /* Color+.swift */; };
+		72DECCDA26FCF6BC00F66BA8 /* CreateImageCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCD926FCF6BC00F66BA8 /* CreateImageCore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,7 +38,7 @@
 		723DC28726E37C4400A24F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72A0424B26F71AFC00002A2E /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = opencv2.xcframework; sourceTree = "<group>"; };
 		72A0425826F776E000002A2E /* MainCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCore.swift; sourceTree = "<group>"; };
-		72A0425B26F784E700002A2E /* CreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateView.swift; sourceTree = "<group>"; };
+		72A0425B26F784E700002A2E /* CreateImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateImageView.swift; sourceTree = "<group>"; };
 		72A0425F26F787E700002A2E /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		72A0426426F78E1E00002A2E /* ColorSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectView.swift; sourceTree = "<group>"; };
 		72DECCC226F7A98200F66BA8 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		72DECCD126FA5ABD00F66BA8 /* YamadaColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamadaColorView.swift; sourceTree = "<group>"; };
 		72DECCD426FCD03A00F66BA8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		72DECCD726FCD2D900F66BA8 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
+		72DECCD926FCF6BC00F66BA8 /* CreateImageCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateImageCore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,7 +128,8 @@
 		72A0425A26F784C300002A2E /* Create */ = {
 			isa = PBXGroup;
 			children = (
-				72A0425B26F784E700002A2E /* CreateView.swift */,
+				72A0425B26F784E700002A2E /* CreateImageView.swift */,
+				72DECCD926FCF6BC00F66BA8 /* CreateImageCore.swift */,
 			);
 			path = Create;
 			sourceTree = "<group>";
@@ -272,9 +275,10 @@
 				72DECCD226FA5ABD00F66BA8 /* YamadaColorView.swift in Sources */,
 				72DECCC626F7BA3F00F66BA8 /* color-assets.swift in Sources */,
 				723DC27F26E37C4200A24F0C /* YamadaColorApp.swift in Sources */,
-				72A0425C26F784E700002A2E /* CreateView.swift in Sources */,
+				72A0425C26F784E700002A2E /* CreateImageView.swift in Sources */,
 				72DECCD826FCD2D900F66BA8 /* Color+.swift in Sources */,
 				72A0425926F776E000002A2E /* MainCore.swift in Sources */,
+				72DECCDA26FCF6BC00F66BA8 /* CreateImageCore.swift in Sources */,
 				72DECCD026FA5A9D00F66BA8 /* YamadaColorCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
