@@ -1,28 +1,29 @@
 //
 //  YamadaColorCore.swift
 //  yamada-color-ios
-//  
+//
 //  Created by nmurata on 2021/09/22
-//  
+//
 //
 
 import ComposableArchitecture
+import SwiftUI
 
 struct YamadaColorState: Equatable {
     var yamadaColor: YamadaColor
 }
 
 enum YamadaColorAction {
-    case didChangeColor(YamadaColor)
+    case didChangeColor(Color)
 }
 
 struct YamadaColorEnvironment {}
 
-let yamadaColor = Reducer<YamadaColorState, YamadaColorAction, YamadaColorEnvironment>.combine(
+let yamadaColorReducer = Reducer<YamadaColorState, YamadaColorAction, YamadaColorEnvironment>.combine(
     Reducer { state, action, _ in
         switch action {
         case .didChangeColor(let color):
-            state.yamadaColor = color
+            state.yamadaColor = YamadaColor(color: color, hex: "changeJHex")
             return .none
         }
     }

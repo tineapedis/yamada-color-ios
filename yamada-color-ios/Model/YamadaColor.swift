@@ -16,4 +16,9 @@ struct YamadaColor: Equatable {
         color = defaultType.color
         hex = defaultType.hex
     }
+
+    init(color: Color, hex: String) {
+        self.color = color
+        self.hex = hex
+    }
 }
