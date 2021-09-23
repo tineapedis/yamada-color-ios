@@ -24,6 +24,7 @@
 		72DECCCD26F8921400F66BA8 /* ColorSelectCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCCC26F8921400F66BA8 /* ColorSelectCore.swift */; };
 		72DECCD026FA5A9D00F66BA8 /* YamadaColorCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCCF26FA5A9D00F66BA8 /* YamadaColorCore.swift */; };
 		72DECCD226FA5ABD00F66BA8 /* YamadaColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCD126FA5ABD00F66BA8 /* YamadaColorView.swift */; };
+		72DECCD526FCD03A00F66BA8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCD426FCD03A00F66BA8 /* UIColor+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +46,7 @@
 		72DECCCC26F8921400F66BA8 /* ColorSelectCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectCore.swift; sourceTree = "<group>"; };
 		72DECCCF26FA5A9D00F66BA8 /* YamadaColorCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamadaColorCore.swift; sourceTree = "<group>"; };
 		72DECCD126FA5ABD00F66BA8 /* YamadaColorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamadaColorView.swift; sourceTree = "<group>"; };
+		72DECCD426FCD03A00F66BA8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,9 +84,10 @@
 			children = (
 				723DC28726E37C4400A24F0C /* Info.plist */,
 				72A0425326F73D4900002A2E /* Application */,
+				72DECCD326FCCFFE00F66BA8 /* Extension */,
 				72DECCC726F87E4100F66BA8 /* Model */,
-				72A0425D26F787BA00002A2E /* Resource */,
 				723DC28426E37C4400A24F0C /* Preview Content */,
+				72A0425D26F787BA00002A2E /* Resource */,
 			);
 			path = "yamada-color-ios";
 			sourceTree = "<group>";
@@ -172,6 +175,14 @@
 			path = YamadaColor;
 			sourceTree = "<group>";
 		};
+		72DECCD326FCCFFE00F66BA8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				72DECCD426FCD03A00F66BA8 /* UIColor+.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -250,6 +261,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72DECCCB26F8820400F66BA8 /* YamadaColor.swift in Sources */,
+				72DECCD526FCD03A00F66BA8 /* UIColor+.swift in Sources */,
 				72DECCCD26F8921400F66BA8 /* ColorSelectCore.swift in Sources */,
 				72A0426526F78E1E00002A2E /* ColorSelectView.swift in Sources */,
 				72DECCC926F87E7600F66BA8 /* YamadaDefaultColorType.swift in Sources */,
