@@ -8,12 +8,17 @@
 
 import SwiftUI
 
-struct YamadaColor {
+struct YamadaColor: Equatable {
     var color: Color
     var hex: String
 
     init(defaultType: YamadaDefaultColorType) {
         color = defaultType.color
         hex = defaultType.hex
+    }
+
+    init(color: Color, hex: String) {
+        self.color = color
+        self.hex = hex
     }
 }

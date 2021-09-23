@@ -5,48 +5,41 @@
 //  Created by Naoyuki Murata on 2021/09/20.
 //
 
+import ComposableArchitecture
 import SwiftUI
 
 struct ColorSelectView: View {
-    let purpleAreaColor = YamadaColor(defaultType: .purple)
-    let blackAreaColor = YamadaColor(defaultType: .black)
-    let yellowAreaColor = YamadaColor(defaultType: .yellow)
-    let pinkAreaColor = YamadaColor(defaultType: .pink)
+    let store: Store<ColorSelectState, ColorSelectAction>
 
     var body: some View {
-        HStack(spacing: 10) {
+        WithViewStore(self.store) { _ in
             VStack(spacing: 10) {
-                ColorButtonView(yamadaColor: purpleAreaColor)
-                ColorButtonView(yamadaColor: blackAreaColor)
-            }
-            VStack(spacing: 10) {
-                ColorButtonView(yamadaColor: yellowAreaColor)
-                ColorButtonView(yamadaColor: pinkAreaColor)
-            }
-        }.padding(10)
-    }
-}
-
-struct ColorButtonView: View {
-    let yamadaColor: YamadaColor
-
-    var body: some View {
-        Button(action: {
-            print("Tap!!")
-        }) {
-            Text(yamadaColor.hex)
-                .font(.title)
-                .foregroundColor(.white)
-                .frame(maxWidth: .infinity,
-                       maxHeight: .infinity)
+                YamadaColorView(color: YamadaDefaultColorType.purple.color,
+                                store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .purple)),
+                                             reducer: yamadaColorReducer,
+                                             environment: YamadaColorEnvironment()))
+                YamadaColorView(color: YamadaDefaultColorType.yellow.color,
+                                store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .yellow)),
+                                             reducer: yamadaColorReducer,
+                                             environment: YamadaColorEnvironment()))
+                YamadaColorView(color: YamadaDefaultColorType.black.color,
+                                store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .black)),
+                                             reducer: yamadaColorReducer,
+                                             environment: YamadaColorEnvironment()))
+                YamadaColorView(color: YamadaDefaultColorType.pink.color,
+                                store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .pink)),
+                                             reducer: yamadaColorReducer,
+                                             environment: YamadaColorEnvironment()))
+            }.padding(10)
         }
-        .background(yamadaColor.color)
-        .cornerRadius(20)
     }
 }
 
 struct ColorSelectView_Previews: PreviewProvider {
     static var previews: some View {
-        ColorSelectView()
+        ColorSelectView(store: .init(
+                            initialState: ColorSelectState(),
+                            reducer: colorSelectReducer,
+                            environment: ColorSelectEnvironment()))
     }
 }
