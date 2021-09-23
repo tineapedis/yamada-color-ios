@@ -14,16 +14,20 @@ struct ColorSelectView: View {
     var body: some View {
         WithViewStore(self.store) { _ in
             VStack(spacing: 10) {
-                YamadaColorView(store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .purple)),
+                YamadaColorView(color: YamadaDefaultColorType.purple.color,
+                                store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .purple)),
                                              reducer: yamadaColorReducer,
                                              environment: YamadaColorEnvironment()))
-                YamadaColorView(store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .yellow)),
+                YamadaColorView(color: YamadaDefaultColorType.yellow.color,
+                                store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .yellow)),
                                              reducer: yamadaColorReducer,
                                              environment: YamadaColorEnvironment()))
-                YamadaColorView(store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .black)),
+                YamadaColorView(color: YamadaDefaultColorType.black.color,
+                                store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .black)),
                                              reducer: yamadaColorReducer,
                                              environment: YamadaColorEnvironment()))
-                YamadaColorView(store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .pink)),
+                YamadaColorView(color: YamadaDefaultColorType.pink.color,
+                                store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .pink)),
                                              reducer: yamadaColorReducer,
                                              environment: YamadaColorEnvironment()))
             }.padding(10)

@@ -10,8 +10,9 @@ import ComposableArchitecture
 import SwiftUI
 
 struct YamadaColorView: View {
-    @State var color = Color.red
-    let store: Store<YamadaColorState, YamadaColorAction>
+    // FIXME: 消す
+    @State var color: Color
+    @State var store: Store<YamadaColorState, YamadaColorAction>
 
     var body: some View {
         WithViewStore(self.store) { viewStore in
@@ -34,7 +35,8 @@ struct YamadaColorView: View {
 
 struct YamadaColorView_Previews: PreviewProvider {
     static var previews: some View {
-        YamadaColorView(store: .init(
+        YamadaColorView(color: YamadaDefaultColorType.purple.color,
+                        store: .init(
                             initialState: YamadaColorState(yamadaColor: .init(defaultType: .purple)),
                             reducer: yamadaColorReducer,
                             environment: YamadaColorEnvironment())
