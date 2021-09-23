@@ -23,7 +23,7 @@ struct YamadaColorView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
                     .background(viewStore.yamadaColor.color)
                     .cornerRadius(10)
-                ColorPicker("", selection: $color)
+                ColorPicker("", selection: $color, supportsOpacity: false)
                     .labelsHidden()
                     .onChange(of: color, perform: { _ in
                         viewStore.send(.didChangeColor(color))
