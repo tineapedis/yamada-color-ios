@@ -15,21 +15,17 @@ struct ColorSelectView: View {
         WithViewStore(self.store) { _ in
             VStack(spacing: 10) {
                 YamadaColorView(color: YamadaDefaultColorType.purple.color,
-                                store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .purple)),
-                                             reducer: yamadaColorReducer,
-                                             environment: YamadaColorEnvironment()))
+                                store: self.store.scope(state: { $0.purpleYamadaColor },
+                                                        action: ColorSelectAction.purpleYamadaColor))
                 YamadaColorView(color: YamadaDefaultColorType.yellow.color,
-                                store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .yellow)),
-                                             reducer: yamadaColorReducer,
-                                             environment: YamadaColorEnvironment()))
+                                store: self.store.scope(state: { $0.yellowYamadaColor },
+                                                        action: ColorSelectAction.yellowYamadaColor))
                 YamadaColorView(color: YamadaDefaultColorType.black.color,
-                                store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .black)),
-                                             reducer: yamadaColorReducer,
-                                             environment: YamadaColorEnvironment()))
+                                store: self.store.scope(state: { $0.blackYamadaColor },
+                                                        action: ColorSelectAction.blackYamadaColor))
                 YamadaColorView(color: YamadaDefaultColorType.pink.color,
-                                store: .init(initialState: YamadaColorState(yamadaColor: .init(defaultType: .pink)),
-                                             reducer: yamadaColorReducer,
-                                             environment: YamadaColorEnvironment()))
+                                store: self.store.scope(state: { $0.pinkYamadaColor },
+                                                        action: ColorSelectAction.pinkYamadaColor))
             }.padding(10)
         }
     }
