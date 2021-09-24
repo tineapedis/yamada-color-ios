@@ -12,15 +12,13 @@ struct CreateImageView: View {
     let store: Store<CreateImageState, CreateImageAction>
 
     var body: some View {
-        WithViewStore(self.store) { viewStore in
+        WithViewStore(store) { _ in
             VStack {
                 Image("yamada")
                     .resizable()
                     .scaledToFill()
                     .padding(10)
-                ColorSelectView(store: .init(initialState: viewStore.colorSelectState,
-                                             reducer: colorSelectReducer,
-                                             environment: ColorSelectEnvironment()))
+                yamadaColorViews(store)
                 Button(action: {
                     // TODO: Createボタン処理実装
                 }) {
@@ -36,6 +34,25 @@ struct CreateImageView: View {
                 Spacer()
             }
         }
+    }
+}
+
+private func yamadaColorViews(_ store: Store<CreateImageState, CreateImageAction>) -> some View {
+    WithViewStore(store) { _ in
+        VStack(spacing: 10) {
+            YamadaColorView(color: YamadaDefaultColorType.purple.color,
+                            store: store.scope(state: { $0.purpleYamadaColor },
+                                               action: CreateImageAction.purpleYamadaColor))
+            YamadaColorView(color: YamadaDefaultColorType.yellow.color,
+                            store: store.scope(state: { $0.yellowYamadaColor },
+                                               action: CreateImageAction.yellowYamadaColor))
+            YamadaColorView(color: YamadaDefaultColorType.black.color,
+                            store: store.scope(state: { $0.blackYamadaColor },
+                                               action: CreateImageAction.blackYamadaColor))
+            YamadaColorView(color: YamadaDefaultColorType.pink.color,
+                            store: store.scope(state: { $0.pinkYamadaColor },
+                                               action: CreateImageAction.pinkYamadaColor))
+        }.padding(10)
     }
 }
 
