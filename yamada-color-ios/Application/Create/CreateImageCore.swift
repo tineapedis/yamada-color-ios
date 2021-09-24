@@ -50,6 +50,7 @@ let createImageReducer = Reducer<CreateImageState, CreateImageAction, CreateImag
     Reducer { state, action, _ in
         switch action {
         case .blackYamadaColor(_), .purpleYamadaColor(_), .yellowYamadaColor(_), .pinkYamadaColor(_):
+            // TODO: OpenCV利用して画像を作成し、yamadaImageを更新する
             return .none
         }
     }
