@@ -12,9 +12,9 @@ struct CreateImageView: View {
     let store: Store<CreateImageState, CreateImageAction>
 
     var body: some View {
-        WithViewStore(store) { _ in
+        WithViewStore(store) { viewStore in
             VStack {
-                Image("yamada")
+                viewStore.state.yamadaImage
                     .resizable()
                     .scaledToFill()
                     .padding(10)

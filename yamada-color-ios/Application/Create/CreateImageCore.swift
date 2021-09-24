@@ -7,8 +7,10 @@
 //
 
 import ComposableArchitecture
+import SwiftUI
 
 struct CreateImageState: Equatable {
+    var yamadaImage = Image("yamada")
     var purpleYamadaColor = YamadaColorState(yamadaColor: .init(defaultType: .purple))
     var yellowYamadaColor = YamadaColorState(yamadaColor: .init(defaultType: .yellow))
     var blackYamadaColor = YamadaColorState(yamadaColor: .init(defaultType: .black))
@@ -44,5 +46,11 @@ let createImageReducer = Reducer<CreateImageState, CreateImageAction, CreateImag
         state: \CreateImageState.pinkYamadaColor,
         action: /CreateImageAction.pinkYamadaColor,
         environment: { _ in YamadaColorEnvironment() }
-    )
+    ),
+    Reducer { state, action, _ in
+        switch action {
+        case .blackYamadaColor(_), .purpleYamadaColor(_), .yellowYamadaColor(_), .pinkYamadaColor(_):
+            return .none
+        }
+    }
 )
