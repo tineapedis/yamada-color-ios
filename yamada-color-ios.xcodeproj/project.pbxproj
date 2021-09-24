@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				723DC27E26E37C4200A24F0C /* YamadaColorApp.swift */,
-				72A0425A26F784C300002A2E /* Create */,
+				72A0425A26F784C300002A2E /* CreateImage */,
 				72A0425426F73F1D00002A2E /* Main */,
 				72DECCCE26FA5A5500F66BA8 /* YamadaColor */,
 			);
@@ -120,13 +120,13 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		72A0425A26F784C300002A2E /* Create */ = {
+		72A0425A26F784C300002A2E /* CreateImage */ = {
 			isa = PBXGroup;
 			children = (
 				72A0425B26F784E700002A2E /* CreateImageView.swift */,
 				72DECCD926FCF6BC00F66BA8 /* CreateImageCore.swift */,
 			);
-			path = Create;
+			path = CreateImage;
 			sourceTree = "<group>";
 		};
 		72A0425D26F787BA00002A2E /* Resource */ = {

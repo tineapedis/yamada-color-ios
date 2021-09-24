@@ -8,6 +8,8 @@
 
 import ComposableArchitecture
 import SwiftUI
+import UIKit
+import opencv2
 
 struct CreateImageState: Equatable {
     var yamadaImage = Image("yamada")
@@ -50,7 +52,10 @@ let createImageReducer = Reducer<CreateImageState, CreateImageAction, CreateImag
     Reducer { state, action, _ in
         switch action {
         case .blackYamadaColor(_), .purpleYamadaColor(_), .yellowYamadaColor(_), .pinkYamadaColor(_):
-            // TODO: OpenCV利用して画像を作成し、yamadaImageを更新する
+            let srcMat = Mat(uiImage: .init(named: "yamada")!)
+            let dstMat = Mat()
+            Imgproc.cvtColor(src: srcMat, dst: dstMat, code: .COLOR_RGB2GRAY)
+            state.yamadaImage = Image(uiImage: dstMat.toUIImage())
             return .none
         }
     }
