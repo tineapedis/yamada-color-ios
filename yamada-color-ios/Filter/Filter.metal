@@ -16,10 +16,10 @@ extern "C" {
             half4 color = sample.rgba;
             half3 checkColor = round(linear_to_srgb(color.rgb) * 255);
             half3 convertColor = half3(255.0/255.0, 128.0/255.0, 20.0/255.0);
-            
-            if ((checkColor.r == 128) && (checkColor.g == 128) && (checkColor.b == 128)) {
+
+//            if ((checkColor.r == 186) && (checkColor.g == 0) && (checkColor.b == 114)) {
                 color = half4(srgb_to_linear(convertColor), 1.0);
-            }
+//            }
             
             return color;
         }

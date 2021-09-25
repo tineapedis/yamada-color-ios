@@ -24,8 +24,14 @@ class CustomFilter: CIFilter {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func outputImage() -> CIImage? {
-        guard let inputImage = inputImage else { return nil }
-        return kernel.apply(extent: inputImage.extent, arguments: [inputImage])
+    func outputImage() -> UIImage? {
+        let ciContext = CIContext(options: nil)
+        guard let inputImage = inputImage,
+              let kernelImage = kernel.apply(extent: inputImage.extent, arguments: [inputImage]),
+              let outputCGImage = ciContext.createCGImage(kernelImage, from: kernelImage.extent) else {
+            return nil
+        }
+
+        return UIImage(cgImage: outputCGImage)
     }
 }
