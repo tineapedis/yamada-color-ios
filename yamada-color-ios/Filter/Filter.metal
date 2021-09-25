@@ -14,12 +14,29 @@ extern "C" {
     namespace coreimage {
         half4 customFilter(sample_h sample) {
             half4 color = sample.rgba;
-            half3 checkColor = round(linear_to_srgb(color.rgb) * 255);
-            half3 convertColor = half3(255.0/255.0, 128.0/255.0, 20.0/255.0);
+            half3 checkColor = linear_to_srgb(color.rgb) * 255;
 
-//            if ((checkColor.r == 186) && (checkColor.g == 0) && (checkColor.b == 114)) {
-                color = half4(srgb_to_linear(convertColor), 1.0);
-//            }
+            half3 orange = half3(255.0/255.0, 128.0/255.0, 20.0/255.0);
+            half3 red = half3(255.0/255.0, 0.0/255.0, 0.0/255.0);
+            half3 blue = half3(0.0/255.0, 0.0/255.0, 255.0/255.0);
+            half3 green = half3(0.0/255.0, 255.0/255.0, 0.0/255.0);
+
+            // Purple
+            if (checkColor.r == 186) {
+                color = half4(srgb_to_linear(orange), 1.0);
+            }
+            // Yellow
+            if (checkColor.b == 0) {
+                color = half4(srgb_to_linear(green), 1.0);
+            }
+            // Pink
+            if (checkColor.b == 203) {
+                color = half4(srgb_to_linear(blue), 1.0);
+            }
+            // Black
+            if (checkColor.r == 0 && checkColor.g == 0 && checkColor.b == 0) {
+                color = half4(srgb_to_linear(red), 1.0);
+            }
             
             return color;
         }
