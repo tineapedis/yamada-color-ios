@@ -54,7 +54,14 @@ let createImageReducer = Reducer<CreateImageState, CreateImageAction, CreateImag
             let yamadaImage = UIImage(named: "yamada")!
             let filter = CustomFilter()
             filter.inputImage = CIImage(image: yamadaImage)
-            let uiImage = filter.outputImage() ?? yamadaImage
+            let purple = CIColor(cgColor: state.purpleYamadaColor.yamadaColor.color.cgColor!)
+            let yellow = CIColor(cgColor: state.yellowYamadaColor.yamadaColor.color.cgColor!)
+            let pink = CIColor(cgColor: state.pinkYamadaColor.yamadaColor.color.cgColor!)
+            let black = CIColor(cgColor: state.blackYamadaColor.yamadaColor.color.cgColor!)
+            let uiImage = filter.outputImage(purpleColor: purple,
+                                             yellowColor: yellow,
+                                             pinkColor: pink,
+                                             blackColor: black) ?? yamadaImage
             state.yamadaImage = Image(uiImage: uiImage)
             return .none
         }

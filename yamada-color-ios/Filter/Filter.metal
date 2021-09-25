@@ -12,30 +12,25 @@ using namespace metal;
 
 extern "C" {
     namespace coreimage {
-        half4 customFilter(sample_h sample) {
+        half4 customFilter(sample_h sample, half4 purple, half4 yellow, half4 pink, half4 black) {
             half4 color = sample.rgba;
             half3 checkColor = linear_to_srgb(color.rgb) * 255;
 
-            half3 orange = half3(255.0/255.0, 128.0/255.0, 20.0/255.0);
-            half3 red = half3(255.0/255.0, 0.0/255.0, 0.0/255.0);
-            half3 blue = half3(0.0/255.0, 0.0/255.0, 255.0/255.0);
-            half3 green = half3(0.0/255.0, 255.0/255.0, 0.0/255.0);
-
             // Purple
             if (checkColor.r == 186) {
-                color = half4(srgb_to_linear(orange), 1.0);
+                color = purple;
             }
             // Yellow
             if (checkColor.b == 0) {
-                color = half4(srgb_to_linear(green), 1.0);
+                color = yellow;
             }
             // Pink
             if (checkColor.b == 203) {
-                color = half4(srgb_to_linear(blue), 1.0);
+                color = pink;
             }
             // Black
             if (checkColor.r == 0 && checkColor.g == 0 && checkColor.b == 0) {
-                color = half4(srgb_to_linear(red), 1.0);
+                color = black;
             }
             
             return color;
