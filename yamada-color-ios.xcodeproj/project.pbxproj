@@ -11,7 +11,6 @@
 		723DC28126E37C4200A24F0C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DC28026E37C4200A24F0C /* MainView.swift */; };
 		723DC28326E37C4400A24F0C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723DC28226E37C4400A24F0C /* Assets.xcassets */; };
 		723DC28626E37C4400A24F0C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 723DC28526E37C4400A24F0C /* Preview Assets.xcassets */; };
-		72A0424D26F71B2800002A2E /* opencv2.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72A0424B26F71AFC00002A2E /* opencv2.xcframework */; };
 		72A0425226F7214B00002A2E /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 72A0425126F7214B00002A2E /* ComposableArchitecture */; };
 		72A0425926F776E000002A2E /* MainCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0425826F776E000002A2E /* MainCore.swift */; };
 		72A0425C26F784E700002A2E /* CreateImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A0425B26F784E700002A2E /* CreateImageView.swift */; };
@@ -34,7 +33,6 @@
 		723DC28226E37C4400A24F0C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		723DC28526E37C4400A24F0C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		723DC28726E37C4400A24F0C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		72A0424B26F71AFC00002A2E /* opencv2.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = opencv2.xcframework; sourceTree = "<group>"; };
 		72A0425826F776E000002A2E /* MainCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCore.swift; sourceTree = "<group>"; };
 		72A0425B26F784E700002A2E /* CreateImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateImageView.swift; sourceTree = "<group>"; };
 		72A0425F26F787E700002A2E /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
@@ -55,7 +53,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				72A0425226F7214B00002A2E /* ComposableArchitecture in Frameworks */,
-				72A0424D26F71B2800002A2E /* opencv2.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +62,6 @@
 		723DC27226E37C4200A24F0C = {
 			isa = PBXGroup;
 			children = (
-				72A0424B26F71AFC00002A2E /* opencv2.xcframework */,
 				723DC27D26E37C4200A24F0C /* yamada-color-ios */,
 				723DC27C26E37C4200A24F0C /* Products */,
 			);
