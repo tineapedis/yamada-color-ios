@@ -24,8 +24,8 @@
 		72DECCD526FCD03A00F66BA8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCD426FCD03A00F66BA8 /* UIColor+.swift */; };
 		72DECCD826FCD2D900F66BA8 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCD726FCD2D900F66BA8 /* Color+.swift */; };
 		72DECCDA26FCF6BC00F66BA8 /* CreateImageCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCD926FCF6BC00F66BA8 /* CreateImageCore.swift */; };
-		72DECCE226FF3B0500F66BA8 /* CustomeFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCE126FF3B0500F66BA8 /* CustomeFilter.swift */; };
-		72DECCE426FF3BD700F66BA8 /* Filter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCE326FF3BD700F66BA8 /* Filter.metal */; };
+		72DECCE226FF3B0500F66BA8 /* YamadaImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCE126FF3B0500F66BA8 /* YamadaImageFilter.swift */; };
+		72DECCE426FF3BD700F66BA8 /* YamadaColorChangeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCE326FF3BD700F66BA8 /* YamadaColorChangeFilter.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,8 +47,8 @@
 		72DECCD426FCD03A00F66BA8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		72DECCD726FCD2D900F66BA8 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		72DECCD926FCF6BC00F66BA8 /* CreateImageCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateImageCore.swift; sourceTree = "<group>"; };
-		72DECCE126FF3B0500F66BA8 /* CustomeFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomeFilter.swift; sourceTree = "<group>"; };
-		72DECCE326FF3BD700F66BA8 /* Filter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Filter.metal; sourceTree = "<group>"; };
+		72DECCE126FF3B0500F66BA8 /* YamadaImageFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamadaImageFilter.swift; sourceTree = "<group>"; };
+		72DECCE326FF3BD700F66BA8 /* YamadaColorChangeFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = YamadaColorChangeFilter.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -179,8 +179,8 @@
 		72DECCDF26FF3AD200F66BA8 /* Filter */ = {
 			isa = PBXGroup;
 			children = (
-				72DECCE126FF3B0500F66BA8 /* CustomeFilter.swift */,
-				72DECCE326FF3BD700F66BA8 /* Filter.metal */,
+				72DECCE126FF3B0500F66BA8 /* YamadaImageFilter.swift */,
+				72DECCE326FF3BD700F66BA8 /* YamadaColorChangeFilter.metal */,
 			);
 			path = Filter;
 			sourceTree = "<group>";
@@ -267,14 +267,14 @@
 				72DECCC926F87E7600F66BA8 /* YamadaDefaultColorType.swift in Sources */,
 				723DC28126E37C4200A24F0C /* MainView.swift in Sources */,
 				72DECCD226FA5ABD00F66BA8 /* YamadaColorView.swift in Sources */,
-				72DECCE426FF3BD700F66BA8 /* Filter.metal in Sources */,
+				72DECCE426FF3BD700F66BA8 /* YamadaColorChangeFilter.metal in Sources */,
 				72DECCC626F7BA3F00F66BA8 /* color-assets.swift in Sources */,
 				723DC27F26E37C4200A24F0C /* YamadaColorApp.swift in Sources */,
 				72A0425C26F784E700002A2E /* CreateImageView.swift in Sources */,
 				72DECCD826FCD2D900F66BA8 /* Color+.swift in Sources */,
 				72A0425926F776E000002A2E /* MainCore.swift in Sources */,
 				72DECCDA26FCF6BC00F66BA8 /* CreateImageCore.swift in Sources */,
-				72DECCE226FF3B0500F66BA8 /* CustomeFilter.swift in Sources */,
+				72DECCE226FF3B0500F66BA8 /* YamadaImageFilter.swift in Sources */,
 				72DECCD026FA5A9D00F66BA8 /* YamadaColorCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

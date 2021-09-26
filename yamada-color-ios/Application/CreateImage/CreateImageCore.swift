@@ -25,7 +25,9 @@ enum CreateImageAction {
     case pinkYamadaColor(YamadaColorAction)
 }
 
-struct CreateImageEnvironment {}
+struct CreateImageEnvironment {
+    var yamadaImageFilter = YamadaImageFilter()
+}
 
 let createImageReducer = Reducer<CreateImageState, CreateImageAction, CreateImageEnvironment>.combine(
     yamadaColorReducer.pullback(
@@ -48,20 +50,13 @@ let createImageReducer = Reducer<CreateImageState, CreateImageAction, CreateImag
         action: /CreateImageAction.pinkYamadaColor,
         environment: { _ in YamadaColorEnvironment() }
     ),
-    Reducer { state, action, _ in
+    Reducer { state, action, environment in
         switch action {
         case .blackYamadaColor(_), .purpleYamadaColor(_), .yellowYamadaColor(_), .pinkYamadaColor(_):
-            let yamadaImage = UIImage(named: "yamada")!
-            let filter = CustomFilter()
-            filter.inputImage = CIImage(image: yamadaImage)
-            let purple = CIColor(cgColor: state.purpleYamadaColor.yamadaColor.color.cgColor!)
-            let yellow = CIColor(cgColor: state.yellowYamadaColor.yamadaColor.color.cgColor!)
-            let pink = CIColor(cgColor: state.pinkYamadaColor.yamadaColor.color.cgColor!)
-            let black = CIColor(cgColor: state.blackYamadaColor.yamadaColor.color.cgColor!)
-            let uiImage = filter.outputImage(purpleColor: purple,
-                                             yellowColor: yellow,
-                                             pinkColor: pink,
-                                             blackColor: black) ?? yamadaImage
+            let uiImage = environment.yamadaImageFilter.outputImage(purpleColor: state.purpleYamadaColor.yamadaColor.ciColor,
+                                                                    yellowColor: state.yellowYamadaColor.yamadaColor.ciColor,
+                                                                    pinkColor: state.pinkYamadaColor.yamadaColor.ciColor,
+                                                                    blackColor: state.blackYamadaColor.yamadaColor.ciColor)
             state.yamadaImage = Image(uiImage: uiImage)
             return .none
         }

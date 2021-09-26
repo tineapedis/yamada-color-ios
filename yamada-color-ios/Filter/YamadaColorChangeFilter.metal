@@ -1,5 +1,5 @@
 //
-//  Filter.metal
+//  YamadaColorChangeFilter.metal
 //  yamada-color-ios
 //  
 //  Created by nmurata on 2021/09/25
@@ -12,7 +12,7 @@ using namespace metal;
 
 extern "C" {
     namespace coreimage {
-        half4 customFilter(sample_h sample, half4 purple, half4 yellow, half4 pink, half4 black) {
+        half4 yamadaColorChangeFilter(sample_h sample, half4 purple, half4 yellow, half4 pink, half4 black) {
             half4 color = sample.rgba;
             half3 checkColor = linear_to_srgb(color.rgb) * 255;
 
