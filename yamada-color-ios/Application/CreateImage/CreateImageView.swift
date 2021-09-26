@@ -14,7 +14,7 @@ struct CreateImageView: View {
     var body: some View {
         WithViewStore(store) { viewStore in
             VStack {
-                viewStore.state.yamadaImage
+                Image(uiImage: viewStore.state.yamadaImage!)
                     .resizable()
                     .scaledToFill()
                     .padding(5)
