@@ -22,6 +22,7 @@ enum CreateImageAction {
     case yellowYamadaColor(YamadaColorAction)
     case blackYamadaColor(YamadaColorAction)
     case pinkYamadaColor(YamadaColorAction)
+    case didTapSaveButton
 }
 
 struct CreateImageEnvironment {
@@ -57,6 +58,8 @@ let createImageReducer = Reducer<CreateImageState, CreateImageAction, CreateImag
                                                                     pinkColor: state.pinkYamadaColor.yamadaColor.ciColor,
                                                                     blackColor: state.blackYamadaColor.yamadaColor.ciColor)
             state.yamadaImage = Image(uiImage: uiImage)
+            return .none
+        case .didTapSaveButton:
             return .none
         }
     }

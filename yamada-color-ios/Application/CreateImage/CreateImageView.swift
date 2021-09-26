@@ -20,7 +20,7 @@ struct CreateImageView: View {
                     .padding(5)
                 yamadaColorViews(store)
                 Button(action: {
-                    // TODO: Saveボタン処理実装
+                    viewStore.send(.didTapSaveButton)
                 }) {
                     Text("Save")
                         .font(.title3)
