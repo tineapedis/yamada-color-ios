@@ -8,7 +8,6 @@
 
 import ComposableArchitecture
 import SwiftUI
-import UIKit
 
 struct CreateImageState: Equatable {
     var yamadaImage = Image("yamada")
