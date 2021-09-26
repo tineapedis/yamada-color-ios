@@ -21,4 +21,8 @@ struct YamadaColor: Equatable {
         self.color = color
         self.hex = hex
     }
+
+    var ciColor: CIColor {
+        CIColor(cgColor: color.cgColor!)
+    }
 }

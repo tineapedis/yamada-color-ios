@@ -24,6 +24,8 @@
 		72DECCD526FCD03A00F66BA8 /* UIColor+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCD426FCD03A00F66BA8 /* UIColor+.swift */; };
 		72DECCD826FCD2D900F66BA8 /* Color+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCD726FCD2D900F66BA8 /* Color+.swift */; };
 		72DECCDA26FCF6BC00F66BA8 /* CreateImageCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCD926FCF6BC00F66BA8 /* CreateImageCore.swift */; };
+		72DECCE226FF3B0500F66BA8 /* YamadaImageFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCE126FF3B0500F66BA8 /* YamadaImageFilter.swift */; };
+		72DECCE426FF3BD700F66BA8 /* YamadaColorChangeFilter.metal in Sources */ = {isa = PBXBuildFile; fileRef = 72DECCE326FF3BD700F66BA8 /* YamadaColorChangeFilter.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		72DECCD426FCD03A00F66BA8 /* UIColor+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+.swift"; sourceTree = "<group>"; };
 		72DECCD726FCD2D900F66BA8 /* Color+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+.swift"; sourceTree = "<group>"; };
 		72DECCD926FCF6BC00F66BA8 /* CreateImageCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateImageCore.swift; sourceTree = "<group>"; };
+		72DECCE126FF3B0500F66BA8 /* YamadaImageFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YamadaImageFilter.swift; sourceTree = "<group>"; };
+		72DECCE326FF3BD700F66BA8 /* YamadaColorChangeFilter.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = YamadaColorChangeFilter.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 				723DC28726E37C4400A24F0C /* Info.plist */,
 				72A0425326F73D4900002A2E /* Application */,
 				72DECCD326FCCFFE00F66BA8 /* Extension */,
+				72DECCDF26FF3AD200F66BA8 /* Filter */,
 				72DECCC726F87E4100F66BA8 /* Model */,
 				723DC28426E37C4400A24F0C /* Preview Content */,
 				72A0425D26F787BA00002A2E /* Resource */,
@@ -100,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				723DC27E26E37C4200A24F0C /* YamadaColorApp.swift */,
-				72A0425A26F784C300002A2E /* Create */,
+				72A0425A26F784C300002A2E /* CreateImage */,
 				72A0425426F73F1D00002A2E /* Main */,
 				72DECCCE26FA5A5500F66BA8 /* YamadaColor */,
 			);
@@ -116,13 +121,13 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
-		72A0425A26F784C300002A2E /* Create */ = {
+		72A0425A26F784C300002A2E /* CreateImage */ = {
 			isa = PBXGroup;
 			children = (
 				72A0425B26F784E700002A2E /* CreateImageView.swift */,
 				72DECCD926FCF6BC00F66BA8 /* CreateImageCore.swift */,
 			);
-			path = Create;
+			path = CreateImage;
 			sourceTree = "<group>";
 		};
 		72A0425D26F787BA00002A2E /* Resource */ = {
@@ -169,6 +174,15 @@
 				72DECCD726FCD2D900F66BA8 /* Color+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		72DECCDF26FF3AD200F66BA8 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				72DECCE126FF3B0500F66BA8 /* YamadaImageFilter.swift */,
+				72DECCE326FF3BD700F66BA8 /* YamadaColorChangeFilter.metal */,
+			);
+			path = Filter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,12 +267,14 @@
 				72DECCC926F87E7600F66BA8 /* YamadaDefaultColorType.swift in Sources */,
 				723DC28126E37C4200A24F0C /* MainView.swift in Sources */,
 				72DECCD226FA5ABD00F66BA8 /* YamadaColorView.swift in Sources */,
+				72DECCE426FF3BD700F66BA8 /* YamadaColorChangeFilter.metal in Sources */,
 				72DECCC626F7BA3F00F66BA8 /* color-assets.swift in Sources */,
 				723DC27F26E37C4200A24F0C /* YamadaColorApp.swift in Sources */,
 				72A0425C26F784E700002A2E /* CreateImageView.swift in Sources */,
 				72DECCD826FCD2D900F66BA8 /* Color+.swift in Sources */,
 				72A0425926F776E000002A2E /* MainCore.swift in Sources */,
 				72DECCDA26FCF6BC00F66BA8 /* CreateImageCore.swift in Sources */,
+				72DECCE226FF3B0500F66BA8 /* YamadaImageFilter.swift in Sources */,
 				72DECCD026FA5A9D00F66BA8 /* YamadaColorCore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,8 +334,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTLLINKER_FLAGS = "-cikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -373,8 +392,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTLLINKER_FLAGS = "-cikernel";
+				MTL_COMPILER_FLAGS = "-fcikernel";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				NEW_SETTING = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";

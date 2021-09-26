@@ -24,7 +24,9 @@ enum CreateImageAction {
     case pinkYamadaColor(YamadaColorAction)
 }
 
-struct CreateImageEnvironment {}
+struct CreateImageEnvironment {
+    var yamadaImageFilter = YamadaImageFilter()
+}
 
 let createImageReducer = Reducer<CreateImageState, CreateImageAction, CreateImageEnvironment>.combine(
     yamadaColorReducer.pullback(
@@ -47,10 +49,14 @@ let createImageReducer = Reducer<CreateImageState, CreateImageAction, CreateImag
         action: /CreateImageAction.pinkYamadaColor,
         environment: { _ in YamadaColorEnvironment() }
     ),
-    Reducer { state, action, _ in
+    Reducer { state, action, environment in
         switch action {
         case .blackYamadaColor(_), .purpleYamadaColor(_), .yellowYamadaColor(_), .pinkYamadaColor(_):
-            // TODO: OpenCV利用して画像を作成し、yamadaImageを更新する
+            let uiImage = environment.yamadaImageFilter.outputImage(purpleColor: state.purpleYamadaColor.yamadaColor.ciColor,
+                                                                    yellowColor: state.yellowYamadaColor.yamadaColor.ciColor,
+                                                                    pinkColor: state.pinkYamadaColor.yamadaColor.ciColor,
+                                                                    blackColor: state.blackYamadaColor.yamadaColor.ciColor)
+            state.yamadaImage = Image(uiImage: uiImage)
             return .none
         }
     }

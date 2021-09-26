@@ -17,16 +17,16 @@ struct CreateImageView: View {
                 viewStore.state.yamadaImage
                     .resizable()
                     .scaledToFill()
-                    .padding(10)
+                    .padding(5)
                 yamadaColorViews(store)
                 Button(action: {
-                    // TODO: Createボタン処理実装
+                    // TODO: Saveボタン処理実装
                 }) {
-                    Text("Create")
-                        .font(.title)
+                    Text("Save")
+                        .font(.title3)
                         .foregroundColor(.white)
-                        .frame(width: 150,
-                               height: 40,
+                        .frame(width: 120,
+                               height: 30,
                                alignment: .center)
                 }
                 .background(Color.blue)
