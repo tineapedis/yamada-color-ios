@@ -8,9 +8,10 @@
 
 import ComposableArchitecture
 import SwiftUI
+import UIKit
 
 struct CreateImageState: Equatable {
-    var yamadaImage = Image("yamada")
+    var yamadaImage = UIImage(named: "yamada")
     var purpleYamadaColor = YamadaColorState(yamadaColor: .init(defaultType: .purple))
     var yellowYamadaColor = YamadaColorState(yamadaColor: .init(defaultType: .yellow))
     var blackYamadaColor = YamadaColorState(yamadaColor: .init(defaultType: .black))
@@ -22,6 +23,7 @@ enum CreateImageAction {
     case yellowYamadaColor(YamadaColorAction)
     case blackYamadaColor(YamadaColorAction)
     case pinkYamadaColor(YamadaColorAction)
+    case didTapSaveButton
 }
 
 struct CreateImageEnvironment {
@@ -56,7 +58,10 @@ let createImageReducer = Reducer<CreateImageState, CreateImageAction, CreateImag
                                                                     yellowColor: state.yellowYamadaColor.yamadaColor.ciColor,
                                                                     pinkColor: state.pinkYamadaColor.yamadaColor.ciColor,
                                                                     blackColor: state.blackYamadaColor.yamadaColor.ciColor)
-            state.yamadaImage = Image(uiImage: uiImage)
+            state.yamadaImage = uiImage
+            return .none
+        case .didTapSaveButton:
+            UIImageWriteToSavedPhotosAlbum(state.yamadaImage!, nil, nil, nil)
             return .none
         }
     }

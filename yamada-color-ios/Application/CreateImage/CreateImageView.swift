@@ -14,13 +14,13 @@ struct CreateImageView: View {
     var body: some View {
         WithViewStore(store) { viewStore in
             VStack {
-                viewStore.state.yamadaImage
+                Image(uiImage: viewStore.state.yamadaImage!)
                     .resizable()
                     .scaledToFill()
                     .padding(5)
                 yamadaColorViews(store)
                 Button(action: {
-                    // TODO: Saveボタン処理実装
+                    viewStore.send(.didTapSaveButton)
                 }) {
                     Text("Save")
                         .font(.title3)
